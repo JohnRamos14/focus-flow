@@ -1,5 +1,9 @@
+import React from 'react';
+import Youtube from  '../src/components/video/Youtube';
+
+
 function App() {
-  return <h1>HELLO FOCUS FLOW</h1>;
+  return <Youtube />;
 }
 
 export default App;
