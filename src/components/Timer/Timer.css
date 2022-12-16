@@ -1,0 +1,39 @@
+#timer-container {
+  width: 50%;
+  margin-right: 30px;
+  height: min(175px, 55vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+h2 {
+  font-size: min(32px, 12vw);
+}
+
+#time-left {
+  font-size: min(80px, 20vw);
+  color: #410083;
+}
+
+#control-panel {
+  width: min(45%, 130px);
+  display: flex;
+  justify-content: space-between;
+}
+
+#control-panel button {
+  background: none;
+  border: none;
+  color: #410083;
+  font-size: min(40px, 10vw);
+  cursor: pointer;
+}
+
+.is-finishing {
+  color: #ff1414;
+}

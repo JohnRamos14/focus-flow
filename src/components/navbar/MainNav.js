@@ -1,5 +1,7 @@
 import {Container, Form, Button, Nav, Navbar} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+
 import logo from '../navbar/img/logo.png'
 
 function mainNav() {

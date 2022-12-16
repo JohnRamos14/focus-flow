@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&display=swap");
+
+#home-container {
+  float: right;
+  height: 50%;
+  width: 50%;
+  margin-top: 310px;
+  font-family: Comfortaa;
+  color: white;
+  background: #edeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#clock-container {
+  width: min(100%, 600px);
+  height: 426px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: min(12vw, 48px);
+  text-align: center;
+}
+
+#my-name {
+  font-family: Roboto;
+  font-size: min(16px, 6vw);
+  text-align: center;
+  margin: min(20px, 5vw) auto 0 auto;
+}
