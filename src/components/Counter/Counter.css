@@ -1,0 +1,61 @@
+.counter-container {
+  height: min(80px, 28vw);
+  width: min(180px, 55vw);
+  min-width: 100px;
+  margin-left: 48px;
+  background: white;
+  color: #410083;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.counter-container h3 {
+  text-align: center;
+  font-size: min(20px, 6vw);
+}
+
+.counter-container .control-panel {
+  width: 80%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-container button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.counter-container i {
+  font-size: min(30px, 10vw);
+  color: #410083;
+}
+
+#session-increment i:hover,
+#break-increment i:hover,
+#sessions-increment i:hover {
+  margin-bottom: min(5px, 1vw);
+}
+
+#session-decrement i:hover,
+#break-decrement i:hover,
+#sessions-decrement i:hover {
+  margin-top: min(5px, 1vw);
+}
+
+.counter-container p {
+  font-size: 24px;
+  margin-left: min(15px, 2vw);
+  margin-right: min(15px, 2vw);
+}
+
+.bigger-when-is-running {
+  font-size: min(32px, 12vw);
+  font-weight: bold;
+}

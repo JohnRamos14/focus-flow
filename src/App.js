@@ -4,6 +4,7 @@ import Youtube from  './components/video/Youtube';
 import Tasks from './components/Tasks/tasks';
 import MainNav from  './components/navbar/MainNav';
 import Multivideos from './components/video/Multivideos';
+import Home from './components/Home';
 // import './App.css'
 
 
@@ -13,7 +14,7 @@ function App() {
     <div className='main'>
     <MainNav/>
     <Youtube />
-    
+    <Home/>
 
     </div>
 
