@@ -1,4 +1,4 @@
-
+// import React from 'react';
 import {Container, Form, Button, Nav, Navbar} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from '../navbar/img/logo.png'
@@ -8,10 +8,11 @@ import logo from '../navbar/img/logo.png'
 
 function mainNav() {
   return (
+    <>
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href ="/">
-        <img src = {logo} width = "70" />
+        <img src = {logo} width = "70" alt='logo' />
         </Navbar.Brand>
         <Form className="d-flex">
             <Form.Control
@@ -39,6 +40,7 @@ function mainNav() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </>
   );
 }
 

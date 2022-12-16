@@ -1,0 +1,10 @@
+.plyr{
+    width: 50%;
+     height: 50%;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     margin-bottom: 20px;
+     margin-left: 20px;
+ }
+
