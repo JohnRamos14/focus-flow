@@ -25,25 +25,22 @@ const Multivideos = () => {
 
   return (
     <>
-    <div>MULITVIDEOS</div>
-      {/* <Col lg={4} md={6} className="d-flex align-items-stretch">
-        <div>
-          {playlist.snippet.resourceId.videoId.map((song) => {
-            <Plyr
-              source={{
+      {playlist.map((video, index) => (
+        <Col key={index}>
+          <Plyr
+             source={{
                 type: "video",
                 sources: [
                   {
-                    src: song.snippet.resourceId.videoId,
+                    src: video.snippet.resourceId.videoId,
                     provider: "youtube",
                   },
                 ],
+        
               }}
-              key={song.snippet.resourceId.videoId}
-            />;
-          })}
-        </div>
-      </Col> */}
+          />
+        </Col>
+      ))}
     </>
   );
 };
