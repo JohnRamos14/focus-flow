@@ -48,6 +48,7 @@ tr {
 
 td{
     display: flex;
+    justify-content: space-between;
 }
 
 .form-label {

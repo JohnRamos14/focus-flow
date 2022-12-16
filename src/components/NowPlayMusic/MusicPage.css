@@ -1,0 +1,10 @@
+/* #body-card{
+    display:inline;
+} */
+#now-play-card{
+    width: 75%;
+    /* height: ; */
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+}
