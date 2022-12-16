@@ -10,14 +10,16 @@ import Multivideos from './components/video/Multivideos';
 function App() {
   return(
     <>
-    <div className='main'>
-    <MainNav/>
+      <MainNav/>
     <Youtube />
-    </div>
-    <Routes>
-        <Route path="/Multivideos" element={<Multivideos />} />
+    <div className='main'>
+  
+     </div>
+      <Routes>
+        <Route path="/multivideos" element={<Multivideos />} />
         <Route path="/tasks" element={<Tasks />} /> 
-    </Routes>
+    </Routes>  
+    
    
     </>
  

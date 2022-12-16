@@ -8,7 +8,6 @@ import Multivideos from "./Multivideos";
 const Youtube = () => {
   const [video, setVideo] = useState([]);
 
-
   useEffect(() => {
     console.log("useEffect");
     getVideo().then(onGetVideoSuccess).catch(onGetVideoError);
@@ -18,13 +17,13 @@ const Youtube = () => {
     setVideo(response.data.items);
   };
 
-  console.log(video);
-
   const onGetVideoError = (response) => {
     console.error({ error: response });
   };
 
-  console.log(video);
+  const videoToPlay = video.map((video) => {
+    return video.id;
+  });
 
   return (
     <>
@@ -33,13 +32,14 @@ const Youtube = () => {
           type: "video",
           sources: [
             {
-              src: "lPCc78REQpU",
+              src: videoToPlay,
               provider: "youtube",
             },
           ],
         }}
       />
-      <Multivideos />
+      
+
     </>
   );
 };
