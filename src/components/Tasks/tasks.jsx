@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
+import './tasks.css';
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(() => {
@@ -18,6 +19,13 @@ const Tasks = () => {
     // console.log(userInput);
     // arr = [1,2,3,4] === [...arr + 5,6,7]
     setTasks([...tasks, userInput]);
+    setUserInput('');
+    e.target.reset();
+  }
+
+  function handleDelete(e) {
+    e.preventDefault();
+    console.log(e)
   }
 
   useEffect(() => {
@@ -30,8 +38,10 @@ const Tasks = () => {
     setUserInput(e.target.value)
   }
 
+// TODO delete button per task
+
   return (
-    <Card style={{ width: '75%' }}>
+    <Card id="tasks-card">
       <Form  onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="formTask">
           <Form.Label>Tasks</Form.Label>
@@ -41,7 +51,7 @@ const Tasks = () => {
             onChange={(e) => inputTaskValue(e)}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button id="tasks-btn" variant="light" type="submit">
           Submit
         </Button>
       </Form>
@@ -49,7 +59,7 @@ const Tasks = () => {
       <Table>
         <thead>
           <tr>
-            <th>Tasks</th>
+            <th className="tasks-header">Tasks</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +70,7 @@ const Tasks = () => {
                 <tr key={task}>
                     <td>
                         {task}
+                    <Button id="delete-btn" type="submit" onClick={(e) => handleDelete(e)}>Delete</Button>
                     </td>
                 </tr>
                 )
