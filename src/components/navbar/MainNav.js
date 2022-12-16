@@ -28,8 +28,8 @@ function mainNav() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Tasks</Nav.Link>
-            <Nav.Link href="#action1">Videos</Nav.Link>
+            <Nav.Link href="/tasks">Tasks</Nav.Link>
+            <Nav.Link href="/multivideos">Videos</Nav.Link>
             <Nav.Link href="#action2">Music</Nav.Link>
             <Nav.Link href="#action2">Favorites</Nav.Link>
             
