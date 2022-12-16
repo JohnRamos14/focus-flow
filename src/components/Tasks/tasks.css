@@ -1,0 +1,63 @@
+#tasks-card{
+    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-color: #8c7b8ed5;
+}
+.card {
+    --bs-card-bg: #c5badc4a;
+}
+
+#tasks-btn {
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+    --bs-btn-border-color: #dbc3de;
+}
+
+#tasks-btn:hover {
+    background-color: #9f87a2;
+}
+
+#tasks-btn:active{
+    background-color: #9f87a2;
+}
+
+#delete-btn {
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+    --bs-btn-border-color: #dbc3de;
+    /* display: flex; */
+    /* align-items: stretch; */
+}
+
+#delete-btn:hover {
+    background-color: #9f87a2;
+}
+
+#delete-btn:active{
+    background-color: #9f87a2;
+}
+
+tr {
+    border-bottom: #8c7b8ed5;
+}
+
+td{
+    display: flex;
+}
+
+.form-label {
+    font-size: x-large;
+    text-align: center;
+}
+
+.tasks-header {
+    font-size: x-large;
+    font-weight: normal;
+    text-align: center;
+
+}
