@@ -3,6 +3,7 @@ import Plyr from "plyr-react"
 import "plyr-react/plyr.css"
 import '../video/videoStyles.css'
 import {getPlaylist} from './service/videoService'
+import Multivideos from './Multivideos'
 
  const Youtube = () => {
 
@@ -17,8 +18,8 @@ import {getPlaylist} from './service/videoService'
   }, [])
 
   const onGetPlaylistSuccess = (response) => {
-    console.log("onGetPlaylistSuccess", response)
-    setPlaylist(response.data.items)
+    let result = response.data.items
+    setPlaylist(result)
   }
 
   const onGetPlaylistError = (response) => {
@@ -37,6 +38,7 @@ import {getPlaylist} from './service/videoService'
         }
       ]
     }} />
+    <Multivideos />
 
     </>
   )
