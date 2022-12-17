@@ -21,7 +21,6 @@ const Youtube = () => {
   };
 
   const videoToPlay = video.map((video, index) => {
-    // return video.id;
     return (
       <Plyr
         source={{
