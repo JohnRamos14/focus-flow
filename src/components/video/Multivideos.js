@@ -3,6 +3,7 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import { getPlaylist } from "./service/videoService";
 import { Col, Row } from "react-bootstrap";
+import './videoStyles.css'
 
 const Multivideos = () => {
   const [playlist, setPlaylist] = useState([]);
@@ -26,8 +27,7 @@ const Multivideos = () => {
   const videoPlayers = playlist.map((video, index) => {
     return (
       <Col
-        className="justify-center"
-        style={{ width: "30%", marginLeft: "50px", paddingBottom: "5px" }}
+        id="player2"
         lg={4}
         key={index}
       >
@@ -39,13 +39,14 @@ const Multivideos = () => {
             ],
           }}
         />
+        <div className="videoTitle">{video.snippet.title}</div>
       </Col>
     );
   });
 
   return (
     <>
-      <Row>{videoPlayers}</Row>
+      <Row className="row2">{videoPlayers}</Row>
     </>
   );
 };
