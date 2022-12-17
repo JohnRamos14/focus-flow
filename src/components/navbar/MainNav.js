@@ -30,7 +30,7 @@ function mainNav() {
             >
               <Nav.Link href="/tasks">Tasks</Nav.Link>
               <Nav.Link href="/multivideos">Videos</Nav.Link>
-              <Nav.Link href="#action2">Music</Nav.Link>
+              <Nav.Link href="/music">Music</Nav.Link>
               <Nav.Link href="#action2">Favorites</Nav.Link>
             </Nav>
           </Navbar.Collapse>

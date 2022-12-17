@@ -20,9 +20,10 @@ const Youtube = () => {
     console.error({ error: response });
   };
 
-  const videoToPlay = video.map((video, index) => {
+  const videoToPlay = video.map((video) => {
     return (
       <Plyr
+        key={video.id}
         source={{
           type: "video",
           sources: [
