@@ -22,8 +22,8 @@ const Youtube = () => {
 
   const videoToPlay = video.map((video, index) => {
     // return video.id;
-    return(
-      <Plyr 
+    return (
+      <Plyr
         source={{
           type: "video",
           sources: [
@@ -32,31 +32,14 @@ const Youtube = () => {
               provider: "youtube",
             },
           ],
-  
         }}
       />
-    )
+    );
   });
 
   return (
     <>
-    <div id="player1">
-      {/* <Plyr 
-      
-        source={{
-          type: "video",
-          sources: [
-            {
-              src: videoToPlay,
-              provider: "youtube",
-            },
-          ],
-
-        }}
-      /> */}
-        {videoToPlay}
-      
-      </div>
+      <div id="player1">{videoToPlay}</div>
     </>
   );
 };

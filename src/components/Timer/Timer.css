@@ -13,14 +13,15 @@
 
 #clock-container {
   width: 47%;
-  height: 50%;
+  height: 55%;
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
   margin-right: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 
 h2 {
   font-size: min(32px, 12vw);

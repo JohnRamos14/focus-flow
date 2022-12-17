@@ -4,7 +4,19 @@
      position: absolute;
      bottom: 0;
      left: 0;
-     margin-bottom: 20px;
+     margin-bottom: 6rem;
      margin-left: 20px;
  }
+
+ @media (min-width: 769px) and (max-width: 992px) {
+    #player1{
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+  }
 
