@@ -3,7 +3,6 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import "../video/videoStyles.css";
 import { getVideo } from "./service/videoService";
-import Multivideos from "./Multivideos";
 
 const Youtube = () => {
   const [video, setVideo] = useState([]);
@@ -21,13 +20,29 @@ const Youtube = () => {
     console.error({ error: response });
   };
 
-  const videoToPlay = video.map((video) => {
-    return video.id;
+  const videoToPlay = video.map((video, index) => {
+    // return video.id;
+    return(
+      <Plyr 
+        source={{
+          type: "video",
+          sources: [
+            {
+              src: video.id,
+              provider: "youtube",
+            },
+          ],
+  
+        }}
+      />
+    )
   });
 
   return (
     <>
-      <Plyr
+    <div id="player1">
+      {/* <Plyr 
+      
         source={{
           type: "video",
           sources: [
@@ -36,11 +51,12 @@ const Youtube = () => {
               provider: "youtube",
             },
           ],
-  
-        }}
-      />
-      
 
+        }}
+      /> */}
+        {videoToPlay}
+      
+      </div>
     </>
   );
 };
