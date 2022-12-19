@@ -1,23 +1,23 @@
-import React, {useState, useEffect} from "react";
-import {getVideo} from '../video/service/videoService'
+import React from "react";
+// import {getVideo} from '../video/service/videoService'
 
 
 const MusicPlayer = () => {
-  const [songs, setSongs] = useState(null);
-  console.log(songs);
+  // const [songs, setSongs] = useState(null);
+  // console.log(songs);
  
-  useEffect(() => {
-    getVideo().then(onGetVideoSuccess).catch(onGetVideoError);
-  }, []);
+  // useEffect(() => {
+  //   getVideo().then(onGetVideoSuccess).catch(onGetVideoError);
+  // }, []);
 
-  const onGetVideoSuccess = (response) => {
-    console.log(response.data.items);
-    setSongs(response.data.items);
-  };
+  // const onGetVideoSuccess = (response) => {
+  //   console.log(response.data.items);
+  //   setSongs(response.data.items);
+  // };
 
-  const onGetVideoError = (response) => {
-    console.error({ error: response });
-  };
+  // const onGetVideoError = (response) => {
+  //   console.error({ error: response });
+  // };
 
   // const songToPlay = songs ? songs.map((song) => {
   //   return (

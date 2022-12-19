@@ -17,7 +17,6 @@ function App() {
         {/* Only render the Youtube component on the home page */}
         {window.location.pathname === "/" && (
           <>
-            
             <Home />
             <Youtube />
           </>

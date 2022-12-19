@@ -7,8 +7,7 @@ import './videoStyles.css'
 
 const Multivideos = () => {
   const [playlist, setPlaylist] = useState([]);
-  console.log(playlist);
-
+ 
   useEffect(() => {
     console.log("useEffect");
     getPlaylist().then(onGetPlaylistSuccess).catch(onGetVideoError);
