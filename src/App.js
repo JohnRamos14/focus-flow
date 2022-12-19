@@ -27,7 +27,7 @@ function App() {
         <Route path="/multivideos" element={<Multivideos />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/musicSelection" element={<MusicSelection />} />
-        <Route path="/now-playing/:trackId" element={<NowPlaying />} />
+        <Route exact path="/now-playing" element={<NowPlaying />} />
       </Routes>
     </>
   );

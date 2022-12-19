@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Table from "react-bootstrap/Table";
+// import Form from "react-bootstrap/Form";
+// import Table from "react-bootstrap/Table";
 import "./About.css";
 
 const About = () => {
