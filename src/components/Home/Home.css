@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&display=swap");
 
-#home-container {
+/* #home-container {
   float: right;
   height: 50%;
   width: 50%;
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} */
 
 h1 {
   font-size: min(12vw, 48px);
@@ -32,4 +32,12 @@ h1 {
   font-size: min(16px, 6vw);
   text-align: center;
   margin: min(20px, 5vw) auto 0 auto;
+}
+
+#home-card-group{
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 98px 15px rgba(0,0,0,0.09); 
+  box-shadow: 0px 0px 98px 15px rgba(0,0,0,0.09);
 }

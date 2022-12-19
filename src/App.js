@@ -18,7 +18,7 @@ function App() {
         {window.location.pathname === "/" && (
           <>
             <Home />
-            <Youtube />
+            {/* <Youtube /> */}
           </>
         )}
       </div>
