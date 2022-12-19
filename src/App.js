@@ -5,13 +5,15 @@ import Tasks from "./components/Tasks/tasks";
 import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
-// import './App.css'
+import './App.css'
+import MusicPlayer from "./components/music/MusicPlayer";
 
 function App() {
   return (
     <>
       <div className="main">
         <MainNav />
+        {/* <MusicPlayer /> */}
         {/* Only render the Youtube component on the home page */}
         {window.location.pathname === "/" && (
           <>
@@ -23,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/multivideos" element={<Multivideos />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="/music" element={<MusicPlayer />} />
       </Routes>
     </>
   );

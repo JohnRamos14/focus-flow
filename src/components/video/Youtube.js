@@ -3,7 +3,7 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import "../video/videoStyles.css";
 import { getVideo } from "./service/videoService";
-import Multivideos from "./Multivideos";
+import {Col} from 'react-bootstrap'
 
 const Youtube = () => {
   const [video, setVideo] = useState([]);
@@ -22,25 +22,28 @@ const Youtube = () => {
   };
 
   const videoToPlay = video.map((video) => {
-    return video.id;
-  });
-
-  return (
-    <>
+    return (
       <Plyr
+        key={video.id}
         source={{
           type: "video",
           sources: [
             {
-              src: videoToPlay,
+              src: video.id,
               provider: "youtube",
             },
           ],
-  
         }}
       />
-      
+    );
+  });
 
+  return (
+    <>
+      <Col lg={6}>
+        <div className="video-container"></div>
+      <div id="player1">{videoToPlay}</div>
+      </Col>
     </>
   );
 };
