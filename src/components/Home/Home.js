@@ -3,6 +3,8 @@ import "./Home.css";
 import Counter from "../Counter";
 import Timer from "../Timer";
 import About from "../About/About";
+import { Card, CardGroup } from "react-bootstrap";
+import Youtube from "../video/Youtube";
 
 function Home() {
   const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
@@ -26,10 +28,17 @@ function Home() {
 
   return (
     <div>
+    <div>
     <About/>
-    <div id="home-container">
-     
-      <div id="clock-container">
+    </div>
+    <br/>
+    <CardGroup id="home-card-group">
+    <Card>
+      <Youtube/>
+    </Card>
+    <Card>
+    {/* <div id="home-container">
+      <div id="clock-container"> */}
         <Counter
           labelId="session-label"
           counterId="session-length"
@@ -50,8 +59,11 @@ function Home() {
           ref={timerRef}
         />
       
-      </div>
-    </div>
+      {/* </div>
+    </div> */}
+    </Card>
+
+    </CardGroup>
     </div>
   );
 }

@@ -41,8 +41,8 @@ const Youtube = () => {
 
   return (
     <>
-      <Col lg={6}>
-        <div className="video-container"></div>
+      <Col >
+        {/* <div className="video-container"></div> */}
       <div id="player1">{videoToPlay}</div>
       </Col>
     </>

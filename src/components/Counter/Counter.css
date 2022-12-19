@@ -1,8 +1,8 @@
 .counter-container {
-  height: min(80px, 28vw);
+  /* height: min(80px, 28vw);
   width: min(180px, 55vw);
   min-width: 100px;
-  margin-left: 48px;
+  margin-left: 48px; */
   background: white;
   color: #410083;
   display: flex;
@@ -11,6 +11,7 @@
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
+  border-top-left-radius: 5px;
 }
 
 .counter-container h3 {
