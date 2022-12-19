@@ -5,6 +5,7 @@ import "./Timer.css";
 import { FaPlay } from 'react-icons/fa';
 import { FaPause} from 'react-icons/fa';
 import { FaUndoAlt} from 'react-icons/fa';
+import { Card } from "react-bootstrap";
 
 
 
@@ -77,7 +78,8 @@ function Timer(props, ref) {
     timeNum < 10 ? "0" + timeNum.toString() : timeNum;
 
   return (
-    <div id="timer-container">
+    <Card id="timer-card">
+    {/* <div id="timer-container"> */}
       <audio id="beep" src={alarmSrc}></audio>
       
       <div
@@ -103,7 +105,8 @@ function Timer(props, ref) {
           <FaUndoAlt/>
         </button>
       </div>
-    </div>
+    {/* </div> */}
+    </Card>
   );
 }
 

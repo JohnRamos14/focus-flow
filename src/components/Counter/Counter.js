@@ -2,11 +2,13 @@ import React from "react";
 import "./Counter.css";
 import { FaAngleDown } from 'react-icons/fa';
 import { FaAngleUp } from 'react-icons/fa';
+import { Card } from "react-bootstrap";
 
 
 
 function Counter(props) {
   return (
+    <Card>
     <div className="counter-container">
       <h3 id={props.labelId}>{props.counterLabel}</h3>
       <div className="control-panel">
@@ -38,6 +40,7 @@ function Counter(props) {
         )}
       </div>
     </div>
+    </Card>
   );
 }
 
