@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
+import './tasks.css'
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(() => {
@@ -53,7 +54,7 @@ const Tasks = () => {
   }
 
   return (
-    <Card style={{ width: '75%' }}>
+    <Card id="tasks-card">
       <Form  onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="formTask">
           <Form.Label>Tasks</Form.Label>
@@ -63,7 +64,7 @@ const Tasks = () => {
             onChange={(e) => inputTaskValue(e)}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button  id="tasks-btn" variant="light" type="submit">
           Submit
         </Button>
       </Form>
@@ -71,14 +72,13 @@ const Tasks = () => {
       <Table>
         <thead>
           <tr>
-            <th>Tasks</th>
+            <th className="tasks-header">Tasks</th>
           </tr>
         </thead>
         <tbody>
           {tasks &&
             tasks.map((task) => {
                 return (
-
                 <tr key={task}>
                     <td>
                         {task}

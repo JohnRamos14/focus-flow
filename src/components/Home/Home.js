@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./Home.css";
 import Counter from "../Counter";
 import Timer from "../Timer";
+import About from "../About/About";
 
 function Home() {
   const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
@@ -24,6 +25,8 @@ function Home() {
   };
 
   return (
+    <div>
+    <About/>
     <div id="home-container">
      
       <div id="clock-container">
@@ -48,6 +51,7 @@ function Home() {
         />
       
       </div>
+    </div>
     </div>
   );
 }
