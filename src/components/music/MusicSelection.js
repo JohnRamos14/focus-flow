@@ -5,12 +5,12 @@ import './selectionStyles.css';
 
 const MusicSelectionPage = () => {
   const lofiHipHop = [
-    { id: 1, title: 'Can We Kiss Forever', scr: './Kina_Can_We_Kiss_Forever_(ft. Adriana Proenza).mp3'},
-    { id: 2, title: 'Get You The Moon', scr: './Kina_Get_You_The_Moon_(ft. Snow).mp3'},
+    { id: 1, title: 'Can We Kiss Forever', src: './hiphop01.mp3'},
+    { id: 2, title: 'Get You The Moon', src: './hiphop02(ft. Snow).mp3'},
   ];
   const lofiJazz = [
-    { id: 1, title: 'Slow Jazz', scr: './SlowJazz01.mp3'},
-    { id: 2, title: 'Smooth Jazz', scr: './SmoothJazz02.mp3'},
+    { id: 1, title: 'Slow Jazz', src: './SlowJazz01.mp3'},
+    { id: 2, title: 'Smooth Jazz', src: './SmoothJazz02.mp3'},
   ];
 
 

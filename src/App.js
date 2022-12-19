@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Youtube from "./components/video/Youtube";
 import Tasks from "./components/Tasks/tasks";
 import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
@@ -14,7 +13,6 @@ function App() {
     <>
       <div className="main">
         <MainNav />
-        {/* <MusicPlayer /> */}
         {/* Only render the Youtube component on the home page */}
         {window.location.pathname === "/" && (
           <>

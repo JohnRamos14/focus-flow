@@ -24,7 +24,6 @@ const Youtube = () => {
   const videoToPlay = video.map((video) => {
     return (
       <Plyr
-      mute={true}
         key={video.id}
         source={{
           type: "video",

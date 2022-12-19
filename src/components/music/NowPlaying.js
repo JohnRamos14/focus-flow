@@ -1,25 +1,21 @@
-import React, { useState, useEffect, createRef as useRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import audio from './Kina_Can_We_Kiss_Forever_(ft. Adriana Proenza).mp3'
 
-const NowPlayingPage = () => {
+const NowPlaying = () => {
   const location = useLocation();
   const genre = location.state.genre;
   const [currentTrack, setCurrentTrack] = useState(genre[0]);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef();
-
-  console.log(genre);
-  
+  const audioRef = createRef();
 
   useEffect(() => {
-    audioRef.current.src = currentTrack.scr;
+    audioRef.current.src = currentTrack.src;
+    console.log(currentTrack.src);
   }, [currentTrack]);
 
   const play = () => {
     setIsPlaying(true);
     audioRef.current.play();
-    console.log(currentTrack.title);
   };
 
   const pause = () => {
@@ -56,4 +52,6 @@ const NowPlayingPage = () => {
   );
 };
 
-export default NowPlayingPage;
+export default NowPlaying;
+
+
