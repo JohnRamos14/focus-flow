@@ -1,0 +1,43 @@
+#about-card {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  border-color: #8c7b8ed5;
+  -webkit-box-shadow: 0px 0px 98px 15px rgba(0,0,0,0.09); 
+  box-shadow: 0px 0px 98px 15px rgba(0,0,0,0.09);
+}
+
+#about-btn-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#custom-btn {
+  background-color: #8e5994;
+  margin: 0.5%;
+  color: whitesmoke;
+  --bs-btn-border-color: #dbc3de;
+}
+
+#custom-btn:hover {
+  background-color: #9f87a2;
+}
+
+#custom-btn:active {
+  background-color: #9f87a2;
+}
+
+#about-header {
+  font-size: x-large;
+  text-align: center;
+}
+
+#about-p {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  /* align-items: center; */
+}
