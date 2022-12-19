@@ -1,16 +1,17 @@
-import React, { useState, useEffect, createRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import ReactAudioPlayer from 'react-audio-player';
 
 const NowPlaying = () => {
   const location = useLocation();
   const genre = location.state.genre;
   const [currentTrack, setCurrentTrack] = useState(genre[0]);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = createRef();
+  const audioRef = useRef();
 
   useEffect(() => {
     audioRef.current.src = currentTrack.src;
-    console.log(currentTrack.src);
+
   }, [currentTrack]);
 
   const play = () => {
@@ -40,15 +41,16 @@ const NowPlaying = () => {
   };
 
   return (
-    <div>
-      <h1>Now Playing</h1>
-      <div>
-        <button onClick={prevTrack}>Previous</button>
-        <button onClick={togglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
-        <button onClick={nextTrack}>Next</button>
-      </div>
-      <audio ref={audioRef} />
-    </div>
+    // <div>
+    //   <h1>Now Playing</h1>
+    //   <div>
+    //     <button onClick={prevTrack}>Previous</button>
+    //     <button onClick={togglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
+    //     <button onClick={nextTrack}>Next</button>
+    //   </div>
+    //   <audio ref={audioRef} />
+    // </div>
+    <ReactAudioPlayer />
   );
 };
 
