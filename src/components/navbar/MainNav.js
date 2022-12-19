@@ -1,6 +1,7 @@
 import { Container, Form, Button, Nav, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import './navbar.css'
 
 import logo from "../navbar/img/logo.png";
 
@@ -8,7 +9,7 @@ function mainNav() {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Container fluid className="justify-content-center">
+        <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} width="70" alt="logo" />
           </Navbar.Brand>

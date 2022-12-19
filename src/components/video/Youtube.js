@@ -3,6 +3,7 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import "../video/videoStyles.css";
 import { getVideo } from "./service/videoService";
+import {Col} from 'react-bootstrap'
 
 const Youtube = () => {
   const [video, setVideo] = useState([]);
@@ -39,7 +40,10 @@ const Youtube = () => {
 
   return (
     <>
+      <Col lg={6}>
+        <div className="video-container"></div>
       <div id="player1">{videoToPlay}</div>
+      </Col>
     </>
   );
 };
