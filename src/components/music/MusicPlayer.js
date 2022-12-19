@@ -2,6 +2,7 @@ import React from "react";
 // import {getVideo} from '../video/service/videoService'
 
 
+
 const MusicPlayer = () => {
   // const [songs, setSongs] = useState(null);
   // console.log(songs);
@@ -36,6 +37,8 @@ const MusicPlayer = () => {
     //testing
 
   return (
+    <>
+  
     <div className="d-flex justify-content-center align-items-center">
       <div>
         <button>Previous</button>
@@ -50,6 +53,7 @@ const MusicPlayer = () => {
         <input type="range" min="0" max="100" value="50" />
       </div>
     </div>
+    </>
   );
 };
 

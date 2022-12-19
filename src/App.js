@@ -6,7 +6,8 @@ import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
 import './App.css'
-import MusicPlayer from "./components/music/MusicPlayer";
+import MusicSelection from "./components/music/MusicSelection";
+import NowPlaying from "./components/music/NowPlaying";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       <Routes>
         <Route path="/multivideos" element={<Multivideos />} />
         <Route path="/tasks" element={<Tasks />} />
-        <Route path="/music" element={<MusicPlayer />} />
+        <Route path="/musicSelection" element={<MusicSelection />} />
+        <Route path="/now-playing/:trackId" element={<NowPlaying />} />
       </Routes>
     </>
   );
