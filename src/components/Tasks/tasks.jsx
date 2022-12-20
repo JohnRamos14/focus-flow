@@ -35,6 +35,7 @@ const Tasks = () => {
         // setTasks(tasks.filter((task) => {
             if (delRes[i] === id) {
                 let removed = delRes.splice(i, 1);
+                console.log(removed);
                 setTasks([...delRes])
                 console.log('here', delRes)
             }

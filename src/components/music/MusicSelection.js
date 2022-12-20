@@ -5,7 +5,7 @@ import "./selectionStyles.css";
 const MusicSelectionPage = () => {
   const lofiHipHop = [
     { id: 1, title: "Can We Kiss Forever", src: "./hiphop01.mp3" },
-    { id: 2, title: "Get You The Moon", src: "./hiphop02(ft. Snow).mp3" },
+    { id: 2, title: "Get You The Moon", src: "./hiphop02.mp3" },
   ];
   const lofiJazz = [
     { id: 1, title: "Slow Jazz", src: "./SlowJazz01.mp3" },
