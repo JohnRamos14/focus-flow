@@ -2,11 +2,16 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import audio from "./hiphop01.mp3";
+import Art from "./testArt.jpg";
+// import MusicControls from "./MusicControls";
+import {ReactComponent as Play} from './assets/play.svg';
+import { ReactComponent as Prev } from './assets/prev.svg';
+import { ReactComponent as Next } from "./assets/next.svg";
 
 const NowPlaying = () => {
-    const location = useLocation();
-    const genre = location.state.genre;
-    console.log(genre);
+  const location = useLocation();
+  const genre = location.state.genre;
+  console.log(genre);
   //   const [currentTrack, setCurrentTrack] = useState(genre[0]);
   //   const [isPlaying, setIsPlaying] = useState(false);
   //   const audioRef = createRef();
@@ -53,8 +58,6 @@ const NowPlaying = () => {
   //     console.log(currentTrack);
   //   };
 
-
-  
   const audioElement = new Audio();
   audioElement.src = audio;
 
@@ -70,19 +73,25 @@ const NowPlaying = () => {
     audioElement.pause();
     audioElement.currentTime = 0;
   };
-
+  
   return (
     <>
-      <h1>Now Playing</h1>
       <div className="d-flex justify-content-center">
-        <button onClick={play}>Play</button>
+      <img src={Art} alt="album art" />
+      <div>  
+        <button ><Prev /></button>
+        <button onClick={play}
+         ><Play /></button>
+        <button ><Next /></button>
         <button onClick={pause}>Pause</button>
         <button onClick={stop}>Stop</button>
+      </div>
       </div>
       <audio src={audio} />
     </>
   );
-  
 };
 
 export default NowPlaying;
+
+

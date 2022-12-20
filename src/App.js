@@ -19,7 +19,7 @@ function App() {
         {window.location.pathname === "/" && (
           <>
             <Home />
-    
+  
           </>
         )}
       </div>
