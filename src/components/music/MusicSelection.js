@@ -9,11 +9,14 @@ import {
 import "./selectionStyles.css";
 
 const MusicSelection = () => {
-  const [playlistId, setPlaylistId] = useState([]);
+  const [jazzPlaylistId, setJazzPlaylistId] = useState(null);
+  const [rockPlaylistId, setRockPlaylistId] = useState(null);
+  const [hiphopPlaylistId, sethiphopPlaylistId] = useState(null);
+  const [coffeePlaylistId, setCoffeePlaylistId] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    getJazzPlaylist().then(onGetMusicSuccess).catch(onGetMusicError);
+    getJazzPlaylist().then(onGetJazzSuccess).catch(onGetJazzError);
 
     getCoffeePlaylist().then(onGetCoffeeSuccess).catch(onGetCoffeeError);
 
@@ -22,16 +25,16 @@ const MusicSelection = () => {
     getHipHoplist().then(onGetHipHopSuccess).catch(onGetHiphopError);
   }, []);
 
-  const onGetMusicSuccess = (response) => {
-    setPlaylistId(response.data.items);
+  const onGetJazzSuccess = (response) => {
+    setJazzPlaylistId(response.data.items);
   };
 
-  const onGetMusicError = (response) => {
+  const onGetJazzError = (response) => {
     console.error({ error: response });
   };
 
   const onGetCoffeeSuccess = (response) => {
-    setPlaylistId(response.data.items);
+    setCoffeePlaylistId(response.data.items);
   };
 
   const onGetCoffeeError = (response) => {
@@ -39,7 +42,7 @@ const MusicSelection = () => {
   };
 
   const onGetRockSuccess = (response) => {
-    setPlaylistId(response.data.items);
+    setRockPlaylistId(response.data.items);
   };
 
   const onGetRockError = (response) => {
@@ -47,14 +50,31 @@ const MusicSelection = () => {
   };
 
   const onGetHipHopSuccess = (response) => {
-    setPlaylistId(response.data.items);
+    sethiphopPlaylistId(response.data.items);
   };
 
   const onGetHiphopError = (response) => {
     console.error({ error: response });
   };
 
-  const selectGenre = (playlistId) => {
+  const selectGenre = (genre) => {
+    let playlistId;
+    switch (genre) {
+      case "jazz":
+        playlistId = jazzPlaylistId;
+        break;
+      case "coffee":
+        playlistId = coffeePlaylistId;
+        break;
+      case "rock":
+        playlistId = rockPlaylistId;
+        break;
+      case "hiphop":
+        playlistId = hiphopPlaylistId;
+        break;
+      default:
+        playlistId = null;
+    }
     navigate(`/now-playing`, { state: { playlistId } });
   };
 
@@ -66,22 +86,38 @@ const MusicSelection = () => {
           <div className="genre-box">
             <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
+
             <button onClick={() => selectGenre(playlistId)} class="subbutton">Select</button>
+
+            <button onClick={() => selectGenre("coffee")}>Select</button>
+
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
+
             <button onClick={() => selectGenre(playlistId)} class="subbutton" >Select</button>
+
+            <button onClick={() => selectGenre("jazz")}>Select</button>
+
           </div>
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
+
             <button onClick={() => selectGenre(playlistId)} class="subbutton">Select</button>
+
+            <button onClick={() => selectGenre("rock")}>Select</button>
+
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
+
             <button onClick={() => selectGenre(playlistId)} class="subbutton">Select</button>
+
+            <button onClick={() => selectGenre("hiphop")}>Select</button>
+
           </div>
         </div>
       </div>

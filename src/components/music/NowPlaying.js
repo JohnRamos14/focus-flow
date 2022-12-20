@@ -6,7 +6,7 @@ import {ReactComponent as Play} from './assets/play.svg'
 import{ReactComponent as Pause} from './assets/pause.svg'
 import {ReactComponent as Prev} from './assets/prev.svg'
 import {ReactComponent as Next} from './assets/next.svg'
-import Tasks from "../Tasks/tasks";
+// import Tasks from "../Tasks/tasks";
 
 const NowPlaying = () => {
   const [playlist, setPlaylist] = useState([]);
@@ -28,9 +28,10 @@ const NowPlaying = () => {
   };
 
   const onNext = () => {
+    player.loadVideoById(playlistId[(currentIndex + 1) % playlistId.length].snippet.resourceId.videoId);
     setCurrentIndex((currentIndex + 1) % playlistId.length);
-    player.loadVideoById(playlistId[currentIndex].snippet.resourceId.videoId);
   };
+  
 
   const onPrevious = () => {
     setCurrentIndex((currentIndex - 1 + playlistId.length) % playlistId.length);
