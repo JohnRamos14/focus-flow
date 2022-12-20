@@ -3,8 +3,22 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 20px;
       justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 260px;
   }
 
+  .subbutton{
+    
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+   border-color: #dbc3de;
+   border-radius: 4px;
+   padding: .375rem .75rem;
+   margin-top: 5rem;
+
+
+  }
   .genre-box {
       display: flex;
       flex-direction: column;
@@ -26,3 +40,4 @@
   .track-list li {
       margin: 10px 0;
   }
+
