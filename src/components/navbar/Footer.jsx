@@ -1,6 +1,6 @@
 import "./Footer.css";
 import logo from "../navbar/img/logo.png";
-import { Container, Form, Button, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import React from "react";
 
 const Footer = () => {

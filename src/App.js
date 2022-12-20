@@ -14,6 +14,7 @@ function App() {
     <>
       <div className="main">
         <MainNav />
+       
         {/* Only render the Youtube component on the home page */}
         {window.location.pathname === "/" && (
           <>

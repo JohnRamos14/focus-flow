@@ -1,10 +1,12 @@
-import React, { useState, useEffect, createRef } from "react";
-// import { useLocation } from "react-router-dom";
+// import React, { useState, useEffect, createRef } from "react";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import audio from "./hiphop01.mp3";
 
 const NowPlaying = () => {
-  //   const location = useLocation();
-  //   const genre = location.state.genre;
+    const location = useLocation();
+    const genre = location.state.genre;
+    console.log(genre);
   //   const [currentTrack, setCurrentTrack] = useState(genre[0]);
   //   const [isPlaying, setIsPlaying] = useState(false);
   //   const audioRef = createRef();
@@ -50,6 +52,7 @@ const NowPlaying = () => {
   //     setCurrentTrack(genre[prevIndex]);
   //     console.log(currentTrack);
   //   };
+
 
   
   const audioElement = new Audio();
