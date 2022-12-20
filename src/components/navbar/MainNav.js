@@ -33,7 +33,7 @@ function mainNav() {
               <Nav.Link href="/multivideos">Videos</Nav.Link>
               <Nav.Link href="/musicSelection">Music</Nav.Link>
               <Nav.Link href="#action2">Favorites</Nav.Link>
-              <Nav.Link href="#action2">Favorites</Nav.Link>
+       
 
             </Nav>
           </Navbar.Collapse>
