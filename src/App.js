@@ -5,7 +5,6 @@ import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
 import './App.css'
-import MusicPlayer from "./components/music/MusicPlayer";
 import Footer from "./components/navbar/Footer";
 import MusicSelection from "./components/music/MusicSelection";
 import NowPlaying from "./components/music/NowPlaying";
@@ -19,7 +18,7 @@ function App() {
         {window.location.pathname === "/" && (
           <>
             <Home />
-            {/* <Youtube /> */}
+    
           </>
         )}
       </div>
