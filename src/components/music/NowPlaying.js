@@ -6,10 +6,12 @@ const NowPlaying = () => {
   const [playlist, setPlaylist] = useState([]);
   const location = useLocation();
   const playlistId = location.state.playlistId;
+  console.log(playlistId);
+  console.log(playlist);
 
   const fetchPlaylist = async () => {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId='PL06diOotXAJJHjvUm7FNNG5a7XUA2_C27'&key='AIzaSyCsSzCnKI0IeLMs8KchtIgx0F-yCfvwNuc'`
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key='AIzaSyCsSzCnKI0IeLMs8KchtIgx0F-yCfvwNuc'`
     );
     const data = await response.json();
     setPlaylist(data.items);
@@ -20,21 +22,23 @@ const NowPlaying = () => {
   }, []);
 
   return (
-    <YouTube
-      videoId={playlist[0].snippet.resourceId.videoId}
-      opts={{
-        height: "360",
-        width: "640",
-        playerVars: {
-          autoplay: 1,
-          controls: 1,
-          showinfo: 0,
-          playlist: playlist
-            .map((item) => item.snippet.resourceId.videoId)
-            .join(","),
-        },
-      }}
-    />
+    <>
+      <YouTube
+        videoId={playlistId[0].snippet.resourceId.videoId}
+        opts={{
+          height: "0",
+          width: "0",
+          playerVars: {
+            autoplay: 1,
+            controls: 1,
+            showinfo: 0,
+            playlist: playlistId
+              .map((item) => item.snippet.resourceId.videoId)
+              .join(","),
+          },
+        }}
+      />
+    </>
   );
 };
 
