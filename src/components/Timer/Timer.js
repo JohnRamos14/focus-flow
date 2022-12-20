@@ -8,8 +8,6 @@ import { FaUndoAlt} from 'react-icons/fa';
 import { Card } from "react-bootstrap";
 
 
-
-
 function Timer(props, ref) {
   const [sessionCounter, setSessionCounter] = useState(1);
   const [titleLabel, setTitleLabel] = useState("Session");

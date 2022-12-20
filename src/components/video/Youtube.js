@@ -41,7 +41,6 @@ const Youtube = () => {
   return (
     <>
       <Col >
-        {/* <div className="video-container"></div> */}
       <div id="player1">{videoToPlay}</div>
       </Col>
     </>

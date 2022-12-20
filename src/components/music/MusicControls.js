@@ -1,52 +1,43 @@
-import React from 'react'
-import {ReactComponent as Play} from './assets/play.svg';
-import { ReactComponent as Prev } from './assets/prev.svg';
-import { ReactComponent as Next } from "./assets/next.svg";
-import { ReactComponent as Pause } from "./assets/pause.svg";
 
-const MusicControls = ({
-    isPlaying,
-  onPlayPauseClick,
-  onPrevClick,
-  onNextClick}) => (
+import React, { useRef, useState } from 'react';
+import YouTube from 'react-youtube';
 
-  <div className="audio-controls">
-    <button
-      type="button"
-      className="prev"
-      aria-label="Previous"
-      onClick={onPrevClick}
-    >
-      <Prev />
-    </button>
-    {isPlaying ? (
-      <button
-        type="button"
-        className="pause"
-        onClick={() => onPlayPauseClick(false)}
-        aria-label="Pause"
-      >
-        <Pause />
-      </button>
-    ) : (
-      <button
-        type="button"
-        className="play"
-        onClick={() => onPlayPauseClick(true)}
-        aria-label="Play"
-      >
-        <Play />
-      </button>
-    )}
-    <button
-      type="button"
-      className="next"
-      aria-label="Next"
-      onClick={onNextClick}
-    >
-      <Next />
-    </button>
-  </div>
-  )
+
+function MusicControls() {
+  const [player, setPlayer] = useState(null);
+  const youtubeRef = useRef();
+
+  const onPlayerReady = (event) => {
+    setPlayer(event.target);
+    event.target.mute();
+  };
+  
+  const onPlayerStateChange = (event) => {
+    
+      player.playVideo();
+    
+  };
+  
+
+
+  return (
+    <YouTube
+      ref={youtubeRef}
+      videoId="8nXqcugV2Y4"
+      opts={{
+        height: '100%',
+        width: '100',
+        playerVars: {
+          autoplay: 1,
+          controls: 1,
+          showinfo: 1
+        }
+      }}
+      onReady={onPlayerReady}
+      onStateChange={onPlayerStateChange}
+    />
+  );
+  
+}
 
 export default MusicControls
