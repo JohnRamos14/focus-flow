@@ -1,4 +1,4 @@
-import { Container, Form, Button, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import './navbar.css'
@@ -34,8 +34,10 @@ function mainNav() {
 
               <Nav.Link href="/tasks">Tasks</Nav.Link>
               <Nav.Link href="/multivideos">Videos</Nav.Link>
-              <Nav.Link href="/music">Music</Nav.Link>
+              <Nav.Link href="/musicSelection">Music</Nav.Link>
               <Nav.Link href="#action2">Favorites</Nav.Link>
+       
+
             </Nav>
 
           </Navbar.Collapse>

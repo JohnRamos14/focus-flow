@@ -1,0 +1,28 @@
+  .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+      justify-content: center;
+  }
+
+  .genre-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid rgb(8, 8, 8);
+      padding: 1rem;
+  }
+
+  .genre-box h2 {
+      margin: 0;
+  }
+
+  .track-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .track-list li {
+      margin: 10px 0;
+  }
