@@ -6,10 +6,10 @@ import {
   getRockPlaylist,
   getHipHoplist,
 } from "../video/service/videoService";
-import './selectionStyles.css'
+import "./selectionStyles.css";
 
 const MusicSelection = () => {
-  const [playlist, setPlaylist] = useState([]);
+  const [playlistId, setPlaylistId] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const MusicSelection = () => {
   }, []);
 
   const onGetMusicSuccess = (response) => {
-    setPlaylist(response.data.items);
+    setPlaylistId(response.data.items);
   };
 
   const onGetMusicError = (response) => {
@@ -31,7 +31,7 @@ const MusicSelection = () => {
   };
 
   const onGetCoffeeSuccess = (response) => {
-    setPlaylist(response.data.items);
+    setPlaylistId(response.data.items);
   };
 
   const onGetCoffeeError = (response) => {
@@ -39,7 +39,7 @@ const MusicSelection = () => {
   };
 
   const onGetRockSuccess = (response) => {
-    setPlaylist(response.data.items);
+    setPlaylistId(response.data.items);
   };
 
   const onGetRockError = (response) => {
@@ -47,7 +47,7 @@ const MusicSelection = () => {
   };
 
   const onGetHipHopSuccess = (response) => {
-    setPlaylist(response.data.items);
+    setPlaylistId(response.data.items);
   };
 
   const onGetHiphopError = (response) => {
@@ -66,22 +66,22 @@ const MusicSelection = () => {
           <div className="genre-box">
             <h2>Lofi Coffee Shop Songs</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre(playlist)}>Select</button>
+            <button onClick={() => selectGenre(playlistId)}>Select</button>
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre(playlist)}>Select</button>
+            <button onClick={() => selectGenre(playlistId)}>Select</button>
           </div>
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre(playlist)}>Select</button>
+            <button onClick={() => selectGenre(playlistId)}>Select</button>
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre(playlist)}>Select</button>
+            <button onClick={() => selectGenre(playlistId)}>Select</button>
           </div>
         </div>
       </div>
