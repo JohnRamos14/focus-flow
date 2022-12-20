@@ -7,6 +7,7 @@ import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
 import './App.css'
 import MusicPlayer from "./components/music/MusicPlayer";
+import Footer from "./components/navbar/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/music" element={<MusicPlayer />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
