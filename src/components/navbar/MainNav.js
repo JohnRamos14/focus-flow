@@ -8,12 +8,12 @@ import logo from "../navbar/img/logo.png";
 function mainNav() {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar id="main-nav" bg="light" expand="lg" variant="dark">
         <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} width="70" alt="logo" />
           </Navbar.Brand>
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -21,19 +21,23 @@ function mainNav() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
-          <Navbar.Toggle aria-controls="navbarScroll" />
+          </Form> */}
+          <Navbar.Toggle aria-controls="navbarScroll" bg="light" />
           <Navbar.Collapse id="navbarScroll">
+
             <Nav
+            id="nav-align"
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
+
               <Nav.Link href="/tasks">Tasks</Nav.Link>
               <Nav.Link href="/multivideos">Videos</Nav.Link>
               <Nav.Link href="/music">Music</Nav.Link>
               <Nav.Link href="#action2">Favorites</Nav.Link>
             </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

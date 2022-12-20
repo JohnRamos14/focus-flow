@@ -1,0 +1,17 @@
+/* #footer-container{
+    position: relative;
+    min-height: 100vh;
+} */
+#footer-container {
+  /* position: sticky; */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(154, 141, 246);
+  background: linear-gradient(
+    90deg,
+    rgb(117, 107, 193) 0%,
+    rgb(70, 18, 114) 15%,
+    rgb(34, 5, 68) 100%
+  );
+}
