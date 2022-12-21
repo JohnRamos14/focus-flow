@@ -1,7 +1,12 @@
-button{
-    margin: 5px;
-    cursor: pointer;
+button {
+  margin: 5px;
+  cursor: pointer;
+  background-color: #8e5994;
+  margin: 0.5%;
+  /* color: whitesmoke; */
+  --bs-btn-border-color: #dbc3de;
+  font-weight: 550;
+  border-radius: 5px;
+  border: unset;
+  padding: 0.4rem;
 }
-
-
-

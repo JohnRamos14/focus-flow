@@ -7,23 +7,23 @@
       margin-bottom: 260px;
   }
 
-  .subbutton{
-    
+  #subbutton{
     background-color: #8e5994;
-    margin: .5%;
+    margin-top: 10%;
     color: whitesmoke;
-   border-color: #dbc3de;
-   border-radius: 4px;
-   padding: .375rem .75rem;
-   margin-top: 5rem;
-
-
+    --bs-btn-border-color: #dbc3de;
   }
+
+  #subbutton:hover, #subbutton:active {
+    background-color: #9f87a2;
+  }
+
   .genre-box {
       display: flex;
       flex-direction: column;
       align-items: center;
       border: 1px solid rgb(8, 8, 8);
+      border-radius: 5px;
       padding: 1rem;
   }
 
