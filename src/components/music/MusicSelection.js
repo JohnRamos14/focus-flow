@@ -93,14 +93,14 @@ const MusicSelection = () => {
             <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
 
-            <button onClick={() => selectGenre("coffee")} class="subbutton">Select</button>
+            <button onClick={() => selectGenre("coffee")} className="subbutton">Select</button>
 
 
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("jazz")} class="subbutton" >Select</button>
+            <button onClick={() => selectGenre("jazz")} className="subbutton" >Select</button>
 
     
 
@@ -108,14 +108,14 @@ const MusicSelection = () => {
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("rock")} class="subbutton">Select</button>
+            <button onClick={() => selectGenre("rock")} className="subbutton">Select</button>
 
 
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("hiphop")} class="subbutton">Select</button>
+            <button onClick={() => selectGenre("hiphop")} className="subbutton">Select</button>
 
 
           </div>

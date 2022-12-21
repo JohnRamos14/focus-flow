@@ -3,5 +3,13 @@ button{
     cursor: pointer;
 }
 
+.plyr-container{
+    width: 50%;
+    margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
 
 
