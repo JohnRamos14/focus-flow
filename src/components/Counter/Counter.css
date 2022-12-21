@@ -3,7 +3,7 @@
   width: min(180px, 55vw);
   min-width: 100px;
   margin-left: 48px; */
-  background: white;
+  background-color: rgb(240, 237, 245);
   color: #410083;
   display: flex;
   flex-direction: column;

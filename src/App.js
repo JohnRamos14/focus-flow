@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Tasks from "./components/Tasks/tasks";
 import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
@@ -8,6 +7,7 @@ import "./App.css";
 import Footer from "./components/navbar/Footer";
 import MusicSelection from "./components/music/MusicSelection";
 import NowPlaying from "./components/music/NowPlaying";
+import TasksPage from "./components/Tasks/TasksPage";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/multivideos" element={<Multivideos />} />
-        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/tasks" element={<TasksPage />} />
         <Route path="/musicSelection" element={<MusicSelection />} />
         <Route exact path="/now-playing" element={<NowPlaying />} />
       </Routes>

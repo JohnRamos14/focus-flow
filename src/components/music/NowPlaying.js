@@ -144,7 +144,7 @@ const NowPlaying = () => {
         <br />
         <CardGroup id="home-card-group">
           <Card>
-            <Tasks />
+            <Tasks/>
           </Card>
           <Card>
             {/* <div id="home-container">

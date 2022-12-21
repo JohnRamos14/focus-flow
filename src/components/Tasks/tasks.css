@@ -1,9 +1,10 @@
 #tasks-card{
-    width: 75%;
+    /* width: 75%;
     margin: auto;
     margin-top: 1rem;
-    margin-bottom: 15.3rem;
-    padding: 1rem;
+    margin-bottom: 15.3rem; */
+    padding: .5rem; 
+    padding-bottom: 3rem;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     border-color: #8c7b8ed5;
     -webkit-box-shadow: 0px 0px 98px 15px rgba(0,0,0,0.09); 
@@ -63,5 +64,8 @@ td{
     font-size: x-large;
     font-weight: normal;
     text-align: center;
+}
 
+#formTask{
+    background-color: rgb(244, 241, 249);
 }

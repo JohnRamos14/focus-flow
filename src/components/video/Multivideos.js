@@ -3,7 +3,7 @@ import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import { getPlaylist } from "./service/videoService";
 import { Button, Col, Row } from "react-bootstrap";
-import './videoStyles.css'
+import "./videoStyles.css";
 
 const Multivideos = () => {
   const [playlist, setPlaylist] = useState([]);
@@ -17,16 +17,16 @@ const Multivideos = () => {
   });
 
   function handleSelect(vidId) {
-    setVid([vidId])
-  };
+    setVid([vidId]);
+  }
 
   useEffect(() => {
     // storing input task
     localStorage.setItem("vid", JSON.stringify(vid));
-    console.log(localStorage.getItem('vid'))
+    console.log(localStorage.getItem("vid"));
   }, [vid]);
 
-//
+  //
 
   useEffect(() => {
     // console.log("useEffect");
@@ -51,6 +51,7 @@ const Multivideos = () => {
         lg={4}
         key={index}
       >
+      <Col id="player2" lg={4} key={index}>
         <Plyr
           source={{
             type: "video",
@@ -61,21 +62,29 @@ const Multivideos = () => {
         />
         <div className="videoTitle">{video.snippet.title}</div>
 
-      <Button href="/musicSelection" type="button" onClick={() => handleSelect(video.snippet.resourceId.videoId)}> 
-      Select 
-      {/* save to local & go to the music page */}
-      </Button>
+        <Button
+        id="select-btn"
+          href="/musicSelection"
+          type="button"
+          onClick={() => handleSelect(video.snippet.resourceId.videoId)}>
+          Select
+          {/* save to local & go to the music page */}
+        </Button>
       </Col>
-
-);
-});
+    );
+  });
 
   return (
     <>
-    <h1>Video Selection</h1>
-      <Row className="row2">{videoPlayers}
-      <Button href="/musicSelection">Skip to Music</Button>
-      </Row>
+      <div id="header-container">
+        <h1 className="header-section">Video Selection </h1>
+        <div id="btn-container">
+        <Button id="skip-btn" href="/musicSelection">
+          Skip to Music
+        </Button>
+        </div>
+      </div>
+      <Row className="row2">{videoPlayers}</Row>
     </>
   );
 };

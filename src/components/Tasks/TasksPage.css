@@ -1,0 +1,23 @@
+#tasks-container{
+    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 15.3rem;
+    padding: 1rem;
+}
+
+#vid-select-btn{
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+    --bs-btn-border-color: #dbc3de;
+}
+
+#vid-select-btn:hover, #vid-select-btn:active{
+    background-color: #9f87a2;
+}
+
+#vid-select-container{
+    display: flex;
+    justify-content: flex-end;
+}
