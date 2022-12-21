@@ -15,7 +15,6 @@ const NowPlaying = () => {
   const [playlist, setPlaylist] = useState([]);
   const location = useLocation();
   const playlistId = location.state.playlistId;
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [player, setPlayer] = useState(null);

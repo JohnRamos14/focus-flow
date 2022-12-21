@@ -89,7 +89,7 @@ const MusicSelection = () => {
         <h1>Music Selection</h1>
         <div className="container">
           <div className="genre-box">
-            <h2>Lofi Coffee Shop Songs</h2>
+            <h2>Coffee Shop</h2>
             <ul className="track-list"></ul>
             <button onClick={() => selectGenre("coffee")}>Select</button>
           </div>
