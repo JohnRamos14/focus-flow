@@ -26,7 +26,15 @@ function App() {
         <Route path="/musicSelection" element={<MusicSelection />} />
         <Route exact path="/now-playing" element={<NowPlaying />} />
       </Routes>
-      <Footer />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <Footer/>
     </>
   );
 }
