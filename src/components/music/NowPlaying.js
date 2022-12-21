@@ -89,7 +89,6 @@ const NowPlaying = () => {
     }
   };
 
-
   return (
     <>
     <div className="plyr-container" style={{width: "50%"}}>
