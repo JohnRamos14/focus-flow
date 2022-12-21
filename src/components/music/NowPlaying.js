@@ -10,14 +10,19 @@ import { ReactComponent as Next } from "./assets/next.svg";
 import Tasks from "../Tasks/tasks";
 import Timer from "../Timer/Timer";
 import Counter from "../Counter/Counter";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
+// import { getVideo } from "./service/videoService";
 
 const NowPlaying = () => {
+  const video = JSON.parse(localStorage.getItem("vid"));
   const [playlist, setPlaylist] = useState([]);
   const location = useLocation();
   const playlistId = location.state.playlistId;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [player, setPlayer] = useState(null);
+  const [currentvideo, setCurrentVideo] = useState(video);
 
   const onPlay = () => {
     player.playVideo();
@@ -59,9 +64,11 @@ const NowPlaying = () => {
   };
 
   useEffect(() => {
+    // getVideo.then(onGetVideoSuccess).catch(getVideoError);
+    setCurrentVideo(video);
     fetchPlaylist();
   }, []);
-
+  console.log(currentvideo);
   // timer and task to render
   const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
 
@@ -84,7 +91,25 @@ const NowPlaying = () => {
 
   return (
     <>
+    <div className="plyr-container" style={{width: "50%"}}>
+        {currentvideo ? (
+          <Plyr
+            autoPlay={true}
+            aut
+            source={{
+              type: "video",
+              sources: [
+                {
+                  src: currentvideo,
+                  provider: "youtube",
+                },
+              ],
+            }}
+          />
+        ) : null}
+      </div>
       <YouTube
+        id=" youtube-player"
         videoId={playlistId[0].snippet.resourceId.videoId}
         onReady={(event) => setPlayer(event.target)}
         opts={{
@@ -118,7 +143,7 @@ const NowPlaying = () => {
         <br />
         <CardGroup id="home-card-group">
           <Card>
-            <Tasks/>
+            <Tasks />
           </Card>
           <Card>
             {/* <div id="home-container">

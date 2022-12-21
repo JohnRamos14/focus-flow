@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import { getPlaylist } from "./service/videoService";
@@ -44,15 +44,15 @@ const Multivideos = () => {
   // console.log(playlist);
 
   const videoPlayers = playlist.map((video, index) => {
-    // console.log('video:', video)
+    console.log('video:', video)
     return (
+   
       <Col id="player2" lg={4} key={index}>
         <Plyr
           source={{
             type: "video",
             sources: [
-              { src: video.snippet.resourceId.videoId, provider: "youtube" },
-              // console.log('vid snip', video.snippet.resourceId.videoId)
+              { src: video.snippet.resourceId.videoId, provider: "youtube"},
             ],
           }}
         />
@@ -67,9 +67,9 @@ const Multivideos = () => {
           {/* save to local & go to the music page */}
         </Button>
       </Col>
+
     );
   });
-
   return (
     <>
       <div id="header-container">
@@ -84,4 +84,5 @@ const Multivideos = () => {
     </>
   );
 };
-export default Multivideos;
+
+export default memo(Multivideos);

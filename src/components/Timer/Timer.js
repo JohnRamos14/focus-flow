@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useImperativeHandle } from "react";
+import React, { useState, forwardRef, useImperativeHandle} from "react";
 import alarmSrc from "./audio/alarm.mp3";
 import { useTimer } from "react-timer-hook";
 import "./Timer.css";

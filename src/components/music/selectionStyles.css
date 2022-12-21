@@ -7,14 +7,14 @@
       margin-bottom: 260px;
   }
 
-  #subbutton{
+  .subbutton{
     background-color: #8e5994;
     margin-top: 10%;
     color: whitesmoke;
     --bs-btn-border-color: #dbc3de;
   }
 
-  #subbutton:hover, #subbutton:active {
+  .subbutton:hover, #subbutton:active {
     background-color: #9f87a2;
   }
 
