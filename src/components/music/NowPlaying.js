@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import YouTube from "react-youtube";
 import { useLocation } from "react-router-dom";
 import "./nowPlayingStyles.css";
-import {ReactComponent as Play} from './assets/play.svg'
-import{ReactComponent as Pause} from './assets/pause.svg'
-import {ReactComponent as Prev} from './assets/prev.svg'
-import {ReactComponent as Next} from './assets/next.svg'
-// import Tasks from "../Tasks/tasks";
+import { CardGroup, Card } from "react-bootstrap";
+import { ReactComponent as Play } from "./assets/play.svg";
+import { ReactComponent as Pause } from "./assets/pause.svg";
+import { ReactComponent as Prev } from "./assets/prev.svg";
+import { ReactComponent as Next } from "./assets/next.svg";
+import Tasks from "../Tasks/tasks";
+import Timer from "../Timer/Timer";
+import Counter from "../Counter/Counter";
 
 const NowPlaying = () => {
   const [playlist, setPlaylist] = useState([]);
@@ -28,10 +31,12 @@ const NowPlaying = () => {
   };
 
   const onNext = () => {
-    player.loadVideoById(playlistId[(currentIndex + 1) % playlistId.length].snippet.resourceId.videoId);
+    player.loadVideoById(
+      playlistId[(currentIndex + 1) % playlistId.length].snippet.resourceId
+        .videoId
+    );
     setCurrentIndex((currentIndex + 1) % playlistId.length);
   };
-  
 
   const onPrevious = () => {
     setCurrentIndex((currentIndex - 1 + playlistId.length) % playlistId.length);
@@ -41,7 +46,7 @@ const NowPlaying = () => {
   const onStop = () => {
     player.stopVideo();
     setIsPlaying(false);
-  }
+  };
 
   const listToListen = playlistId.map((item) => item.snippet.playlistId);
   const idToUse = listToListen[0];
@@ -58,9 +63,28 @@ const NowPlaying = () => {
     fetchPlaylist();
   }, []);
 
+  // timer and task to render
+  const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
+
+  const [timerIsRunning, setTimerIsRunning] = useState(false);
+  const timerRef = useRef();
+
+  const increaseSessionLengthCounter = () => {
+    if (sessionLengthCounter < 60) {
+      setSessionLengthCounter(sessionLengthCounter + 1);
+      setTimeout(() => timerRef.current.restartTimer(), 5);
+    }
+  };
+
+  const decreaseSessionLengthCounter = () => {
+    if (sessionLengthCounter > 1) {
+      setSessionLengthCounter(sessionLengthCounter - 1);
+      setTimeout(() => timerRef.current.restartTimer(), 5);
+    }
+  };
+
   return (
     <>
-    <div style={{ display: "flex", justifyContent: "center" }}>
       <YouTube
         videoId={playlistId[0].snippet.resourceId.videoId}
         onReady={(event) => setPlayer(event.target)}
@@ -77,16 +101,52 @@ const NowPlaying = () => {
           },
         }}
       />
-      <button className="play" onClick={isPlaying ? onPause : onPlay}>
-        {isPlaying ? <Pause /> : <Play />}
-      </button>
-      <button className="prev" onClick={onPrevious}><Prev /></button>
-      <button className="next" onClick={onNext}><Next/></button>
-      <button className="stop" onClick={onStop}>Stop</button>
-    </div>
+      <div>
+        <div className="d-flex justify-content-center">
+          <button className="play" onClick={isPlaying ? onPause : onPlay}>
+            {isPlaying ? <Pause /> : <Play />}
+          </button>
+          <button className="prev" onClick={onPrevious}>
+            <Prev />
+          </button>
+          <button className="next" onClick={onNext}>
+            <Next />
+          </button>
+          <button className="stop" onClick={onStop}>
+            Stop
+          </button>
+        </div>
+        <br />
+        <CardGroup id="home-card-group">
+          <Card>
+            <Tasks />
+          </Card>
+          <Card>
+            {/* <div id="home-container">
+      <div id="clock-container"> */}
+            <Counter
+              labelId="session-label"
+              counterId="session-length"
+              counterLabel="Set Minutes"
+              counter={sessionLengthCounter}
+              increaseCounter={increaseSessionLengthCounter}
+              decreaseCounter={decreaseSessionLengthCounter}
+              incrementBtnId="session-increment"
+              decrementBtnId="session-decrement"
+              timerIsRunning={timerIsRunning}
+            />
+
+            <Timer
+              sessionTime={sessionLengthCounter}
+              passRunning={setTimerIsRunning}
+              setSessionLength={setSessionLengthCounter}
+              ref={timerRef}
+            />
+          </Card>
+        </CardGroup>
+      </div>
     </>
   );
 };
 
 export default NowPlaying;
-

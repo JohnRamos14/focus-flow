@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
 import "../video/videoStyles.css";
@@ -47,4 +47,4 @@ const Youtube = () => {
   );
 };
 
-export default Youtube;
+export default memo(Youtube);
