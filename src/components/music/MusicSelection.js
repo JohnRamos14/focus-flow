@@ -89,24 +89,35 @@ const MusicSelection = () => {
         <h1>Music Selection</h1>
         <div className="container">
           <div className="genre-box">
-            <h2>Coffee Shop</h2>
+      
+            <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("coffee")}>Select</button>
+
+            <button onClick={() => selectGenre("coffee")} class="subbutton">Select</button>
+
+
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("jazz")}>Select</button>
+            <button onClick={() => selectGenre("jazz")} class="subbutton" >Select</button>
+
+    
+
           </div>
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("rock")}>Select</button>
+            <button onClick={() => selectGenre("rock")} class="subbutton">Select</button>
+
+
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("hiphop")}>Select</button>
+            <button onClick={() => selectGenre("hiphop")} class="subbutton">Select</button>
+
+
           </div>
         </div>
       </div>
