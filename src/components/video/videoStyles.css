@@ -25,10 +25,50 @@
 }
 
 .row2 {
-    margin-top: 55px;
+    margin-top: 5px;
     padding: 2rem;
 }
 
 .videoTitle {
     font-weight: bold;
+}
+
+#header-container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#skip-btn{
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+    --bs-btn-border-color: #dbc3de;
+}
+#skip-btn:hover{
+    background-color: #9f87a2;
+}
+
+#skip-btn:active{
+    background-color: #9f87a2;
+}
+
+#btn-container{
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#select-btn{
+    background-color: #8e5994;
+    margin: .5%;
+    color: whitesmoke;
+    --bs-btn-border-color: #dbc3de;
+}
+
+#select-btn:hover{
+    background-color: #9f87a2;
+}
+
+#select-btn:active{
+    background-color: #9f87a2;
 }

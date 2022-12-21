@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import {
   getJazzPlaylist,
@@ -93,14 +94,14 @@ const MusicSelection = () => {
             <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
 
-            <button onClick={() => selectGenre("coffee")} class="subbutton">Select</button>
+            <Button onClick={() => selectGenre("coffee")} id="subbutton">Select</Button>
 
 
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("jazz")} class="subbutton" >Select</button>
+            <Button onClick={() => selectGenre("jazz")} id="subbutton" >Select</Button>
 
     
 
@@ -108,14 +109,14 @@ const MusicSelection = () => {
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("rock")} class="subbutton">Select</button>
+            <Button onClick={() => selectGenre("rock")} id="subbutton">Select</Button>
 
 
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
-            <button onClick={() => selectGenre("hiphop")} class="subbutton">Select</button>
+            <Button onClick={() => selectGenre("hiphop")} id="subbutton">Select</Button>
 
 
           </div>
