@@ -2,7 +2,6 @@ import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 const endpoint = "https://www.googleapis.com/youtube/v3/";
-// const playlistId = `PLEYgnlSbXkImU0CBF8TgbuX6oCO9ZRXz5`;
 const multiVidPlayList = `PLk_a-emwr43aDj5S_mPvfNt_LqQkM2vP6`;
 const jazzPlaylist = "PL06diOotXAJJHjvUm7FNNG5a7XUA2_C27";
 const coffeeShopPlaylist = "OLAK5uy_k0rMyjPYg95yc9P0sbkMLRt982Yl4MlQ8";
