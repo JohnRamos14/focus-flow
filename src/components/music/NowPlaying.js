@@ -95,8 +95,8 @@ const NowPlaying = () => {
     <div className="plyr-container" style={{width: "50%"}}>
         {currentvideo ? (
           <Plyr
-         autoPlay={true}
-         aut
+            autoPlay={true}
+            aut
             source={{
               type: "video",
               sources: [
@@ -108,9 +108,9 @@ const NowPlaying = () => {
             }}
           />
         ) : null}
-    </div>
+      </div>
       <YouTube
-      id=" youtube-player"
+        id=" youtube-player"
         videoId={playlistId[0].snippet.resourceId.videoId}
         onReady={(event) => setPlayer(event.target)}
         opts={{
@@ -144,7 +144,7 @@ const NowPlaying = () => {
         <br />
         <CardGroup id="home-card-group">
           <Card>
-            <Tasks/>
+            <Tasks />
           </Card>
           <Card>
             {/* <div id="home-container">

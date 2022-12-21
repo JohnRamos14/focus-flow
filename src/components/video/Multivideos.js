@@ -46,11 +46,7 @@ const Multivideos = () => {
   const videoPlayers = playlist.map((video, index) => {
     console.log('video:', video)
     return (
-      <Col
-        id="player2"
-        lg={4}
-        key={index}
-      >
+   
       <Col id="player2" lg={4} key={index}>
         <Plyr
           source={{
@@ -71,9 +67,9 @@ const Multivideos = () => {
           {/* save to local & go to the music page */}
         </Button>
       </Col>
+
     );
   });
-
   return (
     <>
       <div id="header-container">
@@ -88,4 +84,5 @@ const Multivideos = () => {
     </>
   );
 };
+
 export default memo(Multivideos);

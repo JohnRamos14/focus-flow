@@ -94,22 +94,14 @@ const MusicSelection = () => {
             <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
 
-<<<<<<< HEAD
             <button onClick={() => selectGenre("coffee")} className="subbutton">Select</button>
-=======
-            <Button onClick={() => selectGenre("coffee")} id="subbutton">Select</Button>
->>>>>>> ef3d21b1724eb9f21b14f2817c94d5281b6c6520
 
 
           </div>
           <div className="genre-box">
             <h2>Lofi Jazz</h2>
             <ul className="track-list"></ul>
-<<<<<<< HEAD
             <button onClick={() => selectGenre("jazz")} className="subbutton" >Select</button>
-=======
-            <Button onClick={() => selectGenre("jazz")} id="subbutton" >Select</Button>
->>>>>>> ef3d21b1724eb9f21b14f2817c94d5281b6c6520
 
     
 
@@ -117,22 +109,14 @@ const MusicSelection = () => {
           <div className="genre-box">
             <h2>Rock</h2>
             <ul className="track-list"></ul>
-<<<<<<< HEAD
             <button onClick={() => selectGenre("rock")} className="subbutton">Select</button>
-=======
-            <Button onClick={() => selectGenre("rock")} id="subbutton">Select</Button>
->>>>>>> ef3d21b1724eb9f21b14f2817c94d5281b6c6520
 
 
           </div>
           <div className="genre-box">
             <h2>Hip Hop</h2>
             <ul className="track-list"></ul>
-<<<<<<< HEAD
             <button onClick={() => selectGenre("hiphop")} className="subbutton">Select</button>
-=======
-            <Button onClick={() => selectGenre("hiphop")} id="subbutton">Select</Button>
->>>>>>> ef3d21b1724eb9f21b14f2817c94d5281b6c6520
 
 
           </div>
