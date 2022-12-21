@@ -6,11 +6,15 @@ import "./navbar.css";
 import logo from "../navbar/img/logo.png";
 
 function mainNav() {
+function removeAllLocal() {
+  localStorage.clear();
+}
+
   return (
     <>
       <Navbar id="main-nav" bg="light" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/" onClick={() => removeAllLocal()}>
             <img src={logo} width="70" alt="logo" />
           </Navbar.Brand>
           {/* <Form className="d-flex">
