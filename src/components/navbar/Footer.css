@@ -3,7 +3,7 @@
     min-height: 100vh;
 } */
 #footer-container {
-  /* position: sticky; */
+  /* position: static; */
   left: 0;
   bottom: 0;
   right: 0;
@@ -13,5 +13,6 @@
     rgb(117, 107, 193) 0%,
     rgb(70, 18, 114) 15%,
     rgb(34, 5, 68) 100%
+  
   );
 }
