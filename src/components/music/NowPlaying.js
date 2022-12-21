@@ -10,19 +10,15 @@ import { ReactComponent as Next } from "./assets/next.svg";
 import Tasks from "../Tasks/tasks";
 import Timer from "../Timer/Timer";
 import Counter from "../Counter/Counter";
-import Plyr from "plyr-react";
-import "plyr-react/plyr.css";
-// import { getVideo } from "./service/videoService";
+import VideoNowPlaying from "./VideoNowPlaying";
 
 const NowPlaying = () => {
-  const video = JSON.parse(localStorage.getItem("vid"));
   const [playlist, setPlaylist] = useState([]);
   const location = useLocation();
   const playlistId = location.state.playlistId;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [player, setPlayer] = useState(null);
-  const [currentvideo, setCurrentVideo] = useState(video);
 
   const onPlay = () => {
     player.playVideo();
@@ -64,14 +60,10 @@ const NowPlaying = () => {
   };
 
   useEffect(() => {
-    // getVideo.then(onGetVideoSuccess).catch(getVideoError);
-    setCurrentVideo(video);
     fetchPlaylist();
   }, []);
-  console.log(currentvideo);
-  // timer and task to render
-  const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
 
+  const [sessionLengthCounter, setSessionLengthCounter] = useState(25);
   const [timerIsRunning, setTimerIsRunning] = useState(false);
   const timerRef = useRef();
 
@@ -91,22 +83,8 @@ const NowPlaying = () => {
 
   return (
     <>
-    <div className="plyr-container" style={{width: "50%"}}>
-        {currentvideo ? (
-          <Plyr
-            autoPlay={true}
-            aut
-            source={{
-              type: "video",
-              sources: [
-                {
-                  src: currentvideo,
-                  provider: "youtube",
-                },
-              ],
-            }}
-          />
-        ) : null}
+      <div className="plyr-container" style={{ width: "90%" }}>
+        <VideoNowPlaying />
       </div>
       <YouTube
         id=" youtube-player"
@@ -146,8 +124,6 @@ const NowPlaying = () => {
             <Tasks />
           </Card>
           <Card>
-            {/* <div id="home-container">
-      <div id="clock-container"> */}
             <Counter
               labelId="session-label"
               counterId="session-length"
