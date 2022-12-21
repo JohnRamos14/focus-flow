@@ -16,13 +16,18 @@ const MusicSelection = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getJazzPlaylist().then(onGetJazzSuccess).catch(onGetJazzError);
-
-    getCoffeePlaylist().then(onGetCoffeeSuccess).catch(onGetCoffeeError);
-
-    getRockPlaylist().then(onGetRockSuccess).catch(onGetRockError);
-
-    getHipHoplist().then(onGetHipHopSuccess).catch(onGetHiphopError);
+    getJazzPlaylist()
+      .then(onGetJazzSuccess)
+      .catch(onGetJazzError);
+    getCoffeePlaylist()
+      .then(onGetCoffeeSuccess)
+      .catch(onGetCoffeeError);
+    getRockPlaylist()
+      .then(onGetRockSuccess)
+      .catch(onGetRockError);
+    getHipHoplist()
+      .then(onGetHipHopSuccess)
+      .catch(onGetHiphopError);
   }, []);
 
   const onGetJazzSuccess = (response) => {
@@ -84,6 +89,7 @@ const MusicSelection = () => {
         <h1>Music Selection</h1>
         <div className="container">
           <div className="genre-box">
+      
             <h2>Coffee Shop </h2>
             <ul className="track-list"></ul>
 
