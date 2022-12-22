@@ -1,6 +1,5 @@
 import React, { useState, useEffect, memo } from "react";
-import Plyr from "plyr-react";
-import "plyr-react/plyr.css";
+import YouTube from "react-youtube";
 
 const VideoNowPlaying = () => {
   const video = JSON.parse(localStorage.getItem("vid"));
@@ -14,16 +13,17 @@ const VideoNowPlaying = () => {
     <>
       <div className="plyr-container" style={{ width: "50%" }}>
         {Array.isArray(currentvideo) && currentvideo.length === 0 ? null : (
-          <Plyr
-            autoPlay={true}
-            source={{
-              type: "video",
-              sources: [
-                {
-                  src: currentvideo,
-                  provider: "youtube",
-                },
-              ],
+          <YouTube
+            id=" youtube-player3"
+            videoId={currentvideo}
+            opts={{
+              height: "360",
+              width: "680",
+              playerVars: {
+                autoplay: 0,
+                controls: 1,
+                showinfo: 0,
+              },
             }}
           />
         )}

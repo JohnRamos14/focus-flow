@@ -1,12 +1,13 @@
-// import { useState, useEffect } from "react";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
-// import Table from "react-bootstrap/Table";
+import { useNavigate } from "react-router-dom";
+
 import "./About.css";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Card id="about-card">
@@ -20,7 +21,7 @@ const About = () => {
                 from YouTube, or you can click below for more options.
             </p>
             <div id="about-btn-div">
-            <Button href="/multivideos" id="custom-btn">Click Here to Customize</Button>
+            <Button onClick={()=> navigate("/multivideos")} id="custom-btn">Click Here to Customize</Button>
             </div>
         </Card.Body>
       </Card>

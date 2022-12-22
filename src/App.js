@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import MainNav from "./components/navbar/MainNav";
 import Multivideos from "./components/video/Multivideos";
 import Home from "./components/Home";
@@ -10,11 +10,12 @@ import NowPlaying from "./components/music/NowPlaying";
 import TasksPage from "./components/Tasks/TasksPage";
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <div className="main">
         <MainNav />
-        {window.location.pathname === "/" && (
+        {location.pathname === "/" && (
           <>
             <Home />
           </>
@@ -38,5 +39,4 @@ function App() {
     </>
   );
 }
-
 export default App;
