@@ -1,13 +1,13 @@
 import React, { useState, useEffect, memo } from "react";
-import Plyr from "plyr-react";
-import "plyr-react/plyr.css";
+import { useNavigate } from "react-router-dom";
 import { getPlaylist } from "./service/videoService";
 import { Button, Col, Row } from "react-bootstrap";
 import "./videoStyles.css";
+import YouTube from "react-youtube";
 
 const Multivideos = () => {
+  const navigate = useNavigate();
   const [playlist, setPlaylist] = useState([]);
-
   const [vid, setVid] = useState(() => {
     const saved = localStorage.getItem("vid");
     const initialValue = JSON.parse(saved);
@@ -16,6 +16,7 @@ const Multivideos = () => {
 
   function handleSelect(vidId) {
     setVid([vidId]);
+    navigate("/musicSelection");
   }
 
   useEffect(() => {
@@ -38,12 +39,17 @@ const Multivideos = () => {
   const videoPlayers = playlist.map((video, index) => {
     return (
       <Col id="player2" lg={4} key={index}>
-        <Plyr
-          source={{
-            type: "video",
-            sources: [
-              { src: video.snippet.resourceId.videoId, provider: "youtube" },
-            ],
+        <YouTube
+          id=" youtube-player2"
+          videoId={video.snippet.resourceId.videoId}
+          opts={{
+            height: "360",
+            width: "640",
+            playerVars: {
+              autoplay: 0,
+              controls: 1,
+              showinfo: 0,
+            },
           }}
         />
         <div className="videoTitle">{video.snippet.title}</div>
@@ -65,7 +71,7 @@ const Multivideos = () => {
       <div id="header-container">
         <h1 className="header-section">Video Selection </h1>
         <div id="btn-container">
-          <Button id="skip-btn" href="/musicSelection">
+          <Button id="skip-btn" onClick={() => navigate("/musicSelection")}>
             Skip to Music
           </Button>
         </div>

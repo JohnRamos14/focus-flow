@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import "./navbar.css";
@@ -14,7 +15,7 @@ function removeAllLocal() {
     <>
       <Navbar id="main-nav" bg="light" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/" onClick={() => removeAllLocal()}>
+          <Navbar.Brand as={Link} to="/" onClick={() => removeAllLocal()}>
             <img src={logo} width="70" alt="logo" />
           </Navbar.Brand>
           {/* <Form className="d-flex">
@@ -34,13 +35,13 @@ function removeAllLocal() {
               style={{ maxHeight: "100px" }}
               navbarScroll>
               <h4>
-                <Nav.Link href="/tasks">Tasks</Nav.Link>
+                <Nav.Link as={Link} to="/tasks">Tasks</Nav.Link>
               </h4>
               <h4>
-                <Nav.Link href="/multivideos">Videos</Nav.Link>
+                <Nav.Link as={Link} to="/multivideos">Videos</Nav.Link>
               </h4>
               <h4>
-                <Nav.Link href="/musicSelection">Music</Nav.Link>
+                <Nav.Link as={Link} to="/musicSelection">Music</Nav.Link>
               </h4>
               {/* <Nav.Link href="#action2">Favorites</Nav.Link> */}
             </Nav>
