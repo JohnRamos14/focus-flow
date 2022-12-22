@@ -56,7 +56,6 @@ const Multivideos = () => {
 
         <Button
           id="select-btn"
-          href="/musicSelection"
           type="button"
           onClick={() => handleSelect(video.snippet.resourceId.videoId)}
         >
