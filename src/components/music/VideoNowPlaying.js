@@ -11,7 +11,7 @@ const VideoNowPlaying = () => {
 
   return (
     <>
-      <div className="plyr-container" style={{ width: "50%" }}>
+      <div className="plyr-container" style={{ width: "60%",}}>
         {Array.isArray(currentvideo) && currentvideo.length === 0 ? null : (
           <YouTube
             id=" youtube-player3"

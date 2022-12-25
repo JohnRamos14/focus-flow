@@ -16,6 +16,7 @@ const Multivideos = () => {
 
   function handleSelect(vidId) {
     setVid([vidId]);
+    localStorage.setItem("vid", JSON.stringify(vidId));
     navigate("/musicSelection");
   }
 
