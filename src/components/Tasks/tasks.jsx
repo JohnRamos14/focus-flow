@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import React from 'react';
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
-import './tasks.css'
+import "./tasks.css";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(() => {
@@ -17,30 +17,20 @@ const Tasks = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(userInput);
-    // arr = [1,2,3,4] === [...arr + 5,6,7]
     setTasks([...tasks, userInput]);
-    setUserInput('');
+    setUserInput("");
     e.target.reset();
   }
 
   function handleDelete(id) {
-    // e.preventDefault();
-    // console.log(e)
-    // let i = tasks.indexOf(value)
-    // console.log(tasks);
     let delRes = tasks;
-    for (let i=0; i<delRes.length; i++) {
-
-        // setTasks(tasks.filter((task) => {
-            if (delRes[i] === id) {
-                let removed = delRes.splice(i, 1);
-                console.log(removed);
-                setTasks([...delRes])
-                console.log('here', delRes)
-            }
-            // console.log(task)
-        // }))
+    for (let i = 0; i < delRes.length; i++) {
+      if (delRes[i] === id) {
+        let removed = delRes.splice(i, 1);
+        console.log(removed);
+        setTasks([...delRes]);
+        console.log("here", delRes);
+      }
     }
   }
 
@@ -51,12 +41,12 @@ const Tasks = () => {
 
   function inputTaskValue(e) {
     // console.log(e.target.value)
-    setUserInput(e.target.value)
+    setUserInput(e.target.value);
   }
 
   return (
     <Card id="tasks-card">
-      <Form  onSubmit={(e) => handleSubmit(e)}>
+      <Form onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="formTask">
           <Form.Label>Tasks</Form.Label>
           <Form.Control
@@ -65,7 +55,7 @@ const Tasks = () => {
             onChange={(e) => inputTaskValue(e)}
           />
         </Form.Group>
-        <Button  id="tasks-btn" variant="light" type="submit">
+        <Button id="tasks-btn" variant="light" type="submit">
           Submit
         </Button>
       </Form>
@@ -79,15 +69,21 @@ const Tasks = () => {
         <tbody>
           {tasks &&
             tasks.map((task) => {
-                return (
+              return (
                 <tr key={task}>
-                    <td>
-                        {task}
-                    <Button id="delete-btn" type="submit" onClick={() => handleDelete(task)}>Delete</Button>
-                    </td>
+                  <td>
+                    {task}
+                    <Button
+                      id="delete-btn"
+                      type="submit"
+                      onClick={() => handleDelete(task)}
+                    >
+                      Delete
+                    </Button>
+                  </td>
                 </tr>
-                )
-          })}
+              );
+            })}
         </tbody>
       </Table>
     </Card>
